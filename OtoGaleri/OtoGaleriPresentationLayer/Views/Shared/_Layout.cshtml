@@ -1,0 +1,49 @@
+﻿
+<!DOCTYPE html>
+<html lang="tr">
+
+       @await Html.PartialAsync("/Views/Partial/HeadPartial.cshtml")
+
+<body>
+      <!-- ======= Header ======= -->
+    @await Html.PartialAsync("/Views/Partial/HeaderPartial.cshtml")
+    <!-- ======= Hero Section ======= -->
+    @await Component.InvokeAsync("Hero")
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+        @await Component.InvokeAsync("About")
+    <!-- ======= Clients Section ======= -->
+        @await Component.InvokeAsync("Brand")
+   
+
+    <!-- ======= Services Section ======= -->
+  
+        @await Component.InvokeAsync("Service")
+    <!-- ======= Portfolio Section ======= -->
+        @await Component.InvokeAsync("Car")
+
+        @await Component.InvokeAsync("Team")
+  </main><!-- End #main -->
+     <div class="container">
+    <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+  <!-- ======= Footer ======= -->
+@await Component.InvokeAsync("Footer")
+
+
+
+    @await Html.PartialAsync("/Views/Partial/ScriptPartial.cshtml")
+
+</body>
+
+</html>
+
+
+
+
+
+

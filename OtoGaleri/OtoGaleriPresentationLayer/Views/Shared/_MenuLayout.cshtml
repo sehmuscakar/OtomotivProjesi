@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/Partial/HeadPartial.cshtml")
+
+<body>
+
+    <!-- ======= Header ======= -->
+    @await Html.PartialAsync("/Views/Partial/HeaderPartial.cshtml")
+
+    <main id="main">
+
+    </main><!-- End #main -->
+    <div>
+        @RenderBody()
+    </div>
+    <!-- ======= Footer ======= -->
+    @await Component.InvokeAsync("Footer")
+    @await Html.PartialAsync("/Views/Partial/ScriptPartial.cshtml")
+
+</body>
+
+</html>
+

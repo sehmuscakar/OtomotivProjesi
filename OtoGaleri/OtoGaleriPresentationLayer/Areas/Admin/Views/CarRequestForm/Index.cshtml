@@ -1,0 +1,113 @@
+﻿@model IEnumerable<DataAccessLayer.Entities.CarRequestForm>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Araç Talep Form Liste Paneli</h3>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Adı ve Soyadı")
+            </th>
+            <th>
+                @Html.DisplayName("Telefon")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mail)
+            </th>
+            <th>
+                @Html.DisplayName("Araç Bilgisi")
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Benzin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dizel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LPG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FarketmezYakit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manuel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Otomatik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FarketmezVitez)
+            </th>
+            <th>
+                @Html.DisplayName("Fiyat Aralığı")
+            </th>
+            <th>
+                @Html.DisplayName("Açıklama")
+            </th>
+
+            <th>
+                @Html.DisplayName("Sırası")
+            </th>
+        
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carİnformation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Benzin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dizel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LPG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarketmezYakit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manuel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otomatik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FarketmezVitez)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.RowOrder)
+            </td>
+        
+            <td>
+                    <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

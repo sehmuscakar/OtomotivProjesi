@@ -1,0 +1,108 @@
+﻿@model DataAccessLayer.Entities.CarRequestForm
+@{
+    ViewData["Title"] = "CarRequestForm";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+ <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Araç Talep Formu</h2>
+                    <ol>
+                        <li><a href="/Home/Anasayfa">Anasyfa</a></li>
+                        <li>Araç Talep Formu</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+<section id="contact" class="contact">
+    <div class="container">
+
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+
+
+
+            <div class="col-lg-8 mt-5 mt-lg-0">
+
+                <form action="CarRequestForm" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <input asp-for="FullName" type="text" class="form-control" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0">
+                            <input asp-for="Phone" type="number" class="form-control" placeholder="Telefon" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group col-md-6">
+                        <input asp-for="Mail" type="text" class="form-control" placeholder="Mail" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input asp-for="Carİnformation" type="text" class="form-control" placeholder="Araç Bilgisi" required>
+                    </div>
+                    </div>
+                    <div class="row"> <strong>Yakıt Türü</strong>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Benzin" /> @Html.DisplayNameFor(model => model.Benzin)
+                            </label>
+                        </div>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="Dizel" /> @Html.DisplayNameFor(model => model.Dizel)
+                            </label>
+                        </div>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="LPG" /> @Html.DisplayNameFor(model => model.LPG)
+                            </label>
+                        </div>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input" asp-for="FarketmezYakit" /> @Html.DisplayNameFor(model => model.FarketmezYakit)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <strong>Vites Tipi</strong>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input"  asp-for="Manuel" /> @Html.DisplayNameFor(model => model.Manuel)
+                            </label>
+                        </div>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input"  asp-for="Otomatik" /> @Html.DisplayNameFor(model => model.Otomatik)
+                            </label>
+                        </div>
+                        <div class="form-group form-check col-md-2">
+                            <label class="form-check-label">
+                                <input class="form-check-input"  asp-for="FarketmezVitez" /> @Html.DisplayNameFor(model => model.FarketmezVitez)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input asp-for="PriceRange" type="text" class="form-control" placeholder="Fiyat Aralığı" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <textarea asp-for="Description" class="form-control" rows="5" placeholder="Mesajınız" required></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Gönderiliyor</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Mesaj Gönder</button></div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

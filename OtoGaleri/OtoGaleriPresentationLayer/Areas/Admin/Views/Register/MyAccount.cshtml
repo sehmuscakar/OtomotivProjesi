@@ -1,0 +1,108 @@
+﻿@model DataAccessLayer.Dtos.AdminDtos.AppUserEditDto
+
+<!DOCTYPE html>
+<html lang="tr">
+
+@await Html.PartialAsync("/Views/Partial/HeadPartial.cshtml")
+
+<body> 
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>Hesap Bilgileri</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
+                    <li class="breadcrumb-item">Register</li>
+                    <li class="breadcrumb-item active">MyAccount</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section profile">
+    
+                <div class="col-xl-8">
+
+                                    <!-- Profile Edit Form -->
+                                    <form method="post" enctype="multipart/form-data" >
+                                        <div class="row mb-3">                
+                                            <label asp-for="ImageUrl" class="col-md-4 col-lg-3 col-form-label">Resminiz</label>
+                                            <div class="col-md-8 col-lg-9">
+                                               <input asp-for="ImageUrl" type="file" class="form-control">                                          
+                                            </div>
+                                        </div>                                    
+                                        <div class="row mb-3">
+                                            <label asp-for="Name" class="col-md-4 col-lg-3 col-form-label">Adınız</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input asp-for="Name"  type="text" class="form-control" >
+                                            </div>
+                                        </div>
+
+                                          <div class="row mb-3">
+                                            <label asp-for="LastName" class="col-md-4 col-lg-3 col-form-label">Soyadınız</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input asp-for="LastName"  type="text" class="form-control" >
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-3">
+                                            <label asp-for="About" class="col-md-4 col-lg-3 col-form-label">Hakkınızda</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <textarea asp-for="About" class="form-control"  style="height: 100px"></textarea>
+                                            </div>
+                                        </div>
+
+                                   
+                                        <div class="row mb-3">
+                                            <label asp-for="Adress" class="col-md-4 col-lg-3 col-form-label">Addres</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input asp-for="Adress"  type="text" class="form-control" id="Address">
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label asp-for="Phone" class="col-md-4 col-lg-3 col-form-label">Telefon</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input asp-for="Phone"  type="text" class="form-control"  >
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label asp-for="Email" class="col-md-4 col-lg-3 col-form-label">Mail</label>
+                                            <div class="col-md-8 col-lg-9">
+                                                <input asp-for="Email" type="email" class="form-control" >
+                                            </div>
+                                        </div>
+
+                                                                
+                                       <div class="row mb-3">
+                                           <label asp-for="Password" class="col-md-4 col-lg-3 col-form-label">Yeni Şifre</label>
+                                           <div class="col-md-8 col-lg-9">
+                                               <input asp-for="Password"  type="password" class="form-control" >
+                                           </div>
+                                       </div>
+                                  
+                                       <div class="row mb-3">
+                                        <label asp-for="ConfirmPassword" class="col-md-4 col-lg-3 col-form-label">Tekrar Şifre Girin</label>
+                                           <div class="col-md-8 col-lg-9">
+                                               <input asp-for="ConfirmPassword" type="password" class="form-control" >
+                                           </div>
+                                       </div>
+                                         <div class="text-center">
+                                            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+                                        </div>
+                                    </form><!-- End Profile Edit Form -->
+
+                                </div>
+
+                         
+         
+        </section>
+
+    </main><!-- End #main -->
+    @await Html.PartialAsync("/Views/Partial/ScriptPartial.cshtml")
+</body>
+
+</html>
