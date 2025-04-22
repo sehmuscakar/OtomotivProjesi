@@ -1,6 +1,6 @@
 # 🚗 OtoGaleri | Web Tabanlı Otomobil Galerisi Projesi
 
-Merhaba! Bu proje, **Mersin Üniversitesi** güz dönemi bitirme projesi olarak geliştirilmiş, **N-Tier Architecture** (Katmanlı Mimari) yapısına sahip, içerik yönetim sistemi (CMS) ile zenginleştirilmiş bir **web tabanlı araç galerisi** uygulamasıdır.
+Merhaba! Bu proje,  **N-Tier Architecture** (Katmanlı Mimari) yapısına sahip, içerik yönetim sistemi (CMS) ile zenginleştirilmiş bir **web tabanlı araç galerisi** uygulamasıdır.
 
 ---
 
